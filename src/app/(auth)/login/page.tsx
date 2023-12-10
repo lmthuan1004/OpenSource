@@ -7,13 +7,11 @@ import React, { useEffect } from 'react';
 const AdminLoginPage = () => {
 	const router = useRouter();
 	const { auth } = useAppSelector((state) => state);
-
 	useEffect(() => {
 		if (auth.isLoggedIn) {
-			window.location.assign('/admin');
+			window.location.href = '/admin';
 		}
 	}, [auth, router]);
-
 	return <AdminLogin />;
 };
 
