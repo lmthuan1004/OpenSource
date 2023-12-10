@@ -7,6 +7,7 @@ import productReducer from './productReducer';
 import roleReducer from './roleReducer';
 import customerReducer from './customerReducer';
 import orderReducer from './orderReducer';
+import voucherReducer from './voucherReducer';
 
 const rootReducer = combineReducers({
 	sideBar: sideBarReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
 	category: categoryReducer,
 	product: productReducer,
 	role: roleReducer,
+	voucher: voucherReducer,
 });
 
 export default rootReducer;
