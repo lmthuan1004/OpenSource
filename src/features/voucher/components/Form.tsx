@@ -71,7 +71,7 @@ const VoucherForm: React.FC<VoucherFormProps> = (props) => {
 						>
 							<MInput
 								size='large'
-								disabled
+								disabled={true}
 							/>
 						</Form.Item>
 					</MCol>
