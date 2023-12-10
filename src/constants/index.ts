@@ -42,4 +42,26 @@ const PAYMENT_METHOD = [
 	},
 ];
 
-export { CATEGORY_TYPE, STATUS_PRODUCT, STATUS_ORDER, PAYMENT_METHOD };
+const STATUS_VOUCHER = [
+	{
+		label: 'Active',
+		value: 'active',
+	},
+	{
+		label: 'Disable',
+		value: 'disable',
+	},
+];
+
+const TYPE_VOUCHER = [
+	{
+		label: '%',
+		value: 'percent',
+	},
+	{
+		label: 'Price',
+		value: 'price',
+	},
+];
+
+export { CATEGORY_TYPE, STATUS_PRODUCT, STATUS_ORDER, PAYMENT_METHOD, STATUS_VOUCHER, TYPE_VOUCHER };
