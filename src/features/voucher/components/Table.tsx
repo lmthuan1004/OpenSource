@@ -204,7 +204,10 @@ const VoucherTable = () => {
 					</MButton>
 					<MButtonDelete
 						title={`Xoá voucher ${item.name}? `}
-						onConfirm={() => dispatch(deletingVoucher(item._id))}
+						onConfirm={() => {
+							console.log('Chức năng xóa voucher');
+							dispatch(deletingVoucher(item._id));
+						}}
 					></MButtonDelete>
 				</MSpace>
 			),
