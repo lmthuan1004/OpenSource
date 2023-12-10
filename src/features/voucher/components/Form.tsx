@@ -43,7 +43,9 @@ const VoucherForm: React.FC<VoucherFormProps> = (props) => {
 
 	useEffect(() => {
 		form.setFieldsValue(
-			voucherEdit ? { ...voucherEdit, dateEnd: changeDateStringToDayjs(voucherEdit.dateEnd as string), dateStart: changeDateStringToDayjs(voucherEdit.dateStart as string) } : { ...INITIAL_VALUE },
+			voucherEdit
+				? { ...voucherEdit, dateEnd: changeDateStringToDayjs(voucherEdit.dateEnd as string), dateStart: changeDateStringToDayjs(voucherEdit.dateStart as string) }
+				: { ...INITIAL_VALUE, code: generateVoucherCode() },
 		);
 	}, [form, voucherEdit]);
 
@@ -67,7 +69,10 @@ const VoucherForm: React.FC<VoucherFormProps> = (props) => {
 							label='Code'
 							rules={[{ required: true }]}
 						>
-							<MInput size='large' />
+							<MInput
+								size='large'
+								disabled={true}
+							/>
 						</Form.Item>
 					</MCol>
 					<MCol span={6}>
